@@ -14,7 +14,7 @@ class SchoolClass(models.Model):
     subject_id = fields.Many2one('subjects', string='Subject')
     student_id = fields.Many2one('res.partner', string='Student')
     student_country_id = fields.Many2one('res.country', related='student_id.country_id')
-    teacher_id = fields.Many2one('res.partner', string='Teacher',domain="[('country_id', '=',student_country_id )]")
+    teacher_id = fields.Many2one('res.partner', string='Teacher',)
 
     @api.onchange('subject_id')
     def get_class_name(self):

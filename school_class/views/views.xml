@@ -13,7 +13,7 @@
           <group>
           <field name="subject_id" />
           <field name="student_id" />
-          <field name="teacher_id"  />
+          <field name="teacher_id" domain="[('country_id', '=',student_country_id )]" />
           <field name="student_country_id"  invisible='1' />
 
             
